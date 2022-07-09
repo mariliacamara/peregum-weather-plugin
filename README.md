@@ -1,0 +1,1 @@
+# peregum-weather-plugin
