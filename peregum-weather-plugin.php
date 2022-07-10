@@ -37,7 +37,7 @@ function uniqueDate(array $array, int $initial = 0,int $limit = 3) : array {
 
 
 function poaStation() {
-    $results1 = getInfo('', '1474');
+    $results1 = getInfo(getenv('PLUGFIELD_TOKEN'), '1474');
     $currentDayPoa = uniqueDate($results1, 0, 1)[0];
     $nextDaysPoa = uniqueDate($results1, 1, 3);
     
@@ -83,7 +83,7 @@ function poaStation() {
 add_shortcode('poa-weather', 'poaStation');
 
 function perusStation() {
-    $results2 = getInfo('', '1511');
+    $results2 = getInfo(getenv('PLUGFIELD_TOKEN'), '1511');
     $currentDayPerus = uniqueDate($results2, 0, 1)[0];
     $nextDaysPerus = uniqueDate($results2, 1, 3);
 ?>
